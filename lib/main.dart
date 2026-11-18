@@ -1,8 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'models.dart';
+import 'dashboard_page.dart';
+
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,7 +55,7 @@ class HiveSpaceApp extends StatelessWidget {
       title: 'HiveSpace Expenses',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF3867D6),
+          seedColor: const Color(0xFF3868D6),
         ),
         useMaterial3: true,
       ),
@@ -134,6 +136,19 @@ class _HomePageState extends State<HomePage> {
         backgroundColor:
         Theme.of(context).colorScheme.inversePrimary,
         actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DashboardPage(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.dashboard),
+            tooltip: 'Dashboard',
+          ),
+
           IconButton(
             onPressed: _addCategory,
             icon: const Icon(Icons.category),
