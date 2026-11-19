@@ -1,10 +1,11 @@
 # HiveSpace Coworking Expense Tracker
 
-A lightweight Flutter app for HiveSpace Coworking staff to record daily operational expenses, organise them into categories, and store everything locally using Hive.
+A lightweight Flutter app for HiveSpace Coworking staff...
 
 **Status:** Task 1, Task 2 and Task 3 features completed.
 
-Live demo: https://jutt-azeem.github.io/hivespace-expense/
+**Live demo:** https://jutt-azeem.github.io/hivespace-expense/
+
 ---
 
 ## Features
@@ -109,6 +110,7 @@ On Android, data persists locally across app restarts.
 - [x] Task 3: Dashboard, category-wise bar chart and CSV export.
 - [x] GitHub Pages deployment and live demo.
   https://jutt-azeem.github.io/hivespace-expense/
+
 ## Author
 
 Azeem Ali  
