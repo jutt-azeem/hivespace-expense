@@ -91,25 +91,33 @@ The `--base-href` value must match the repository name, otherwise the page will 
 
 1. Push the project code to the `main` branch of the GitHub repository.
 2. Build the web version using the command in the section above.
-3. Publish the `build/web` folder to a `gh-pages` branch:
+3. Commit the build output (`build/` is git-ignored, so add it with `-f`):
 
 ```bash
-cd build/web
-git init
-git checkout -b gh-pages
-git add .
-git commit -m "Deploy web build"
-git remote add origin https://github.com/jutt-azeem/hivespace-expense.git
-git push -f origin gh-pages
-cd ../..
+git add -f build/web
+git commit -m "Add web build"
 ```
 
-4. On GitHub open **Settings -> Pages**.
-5. Under **Source** choose **Deploy from a branch**.
-6. Select the `gh-pages` branch and the `/ (root)` folder, then click **Save**.
-7. After a minute or two the app is live at https://jutt-azeem.github.io/hivespace-expense/
+4. Publish the `build/web` folder to the `gh-pages` branch:
 
-To update the live app later, rebuild and push `build/web` to `gh-pages` again.
+```bash
+git subtree push --prefix build/web origin gh-pages
+```
+
+If Git rejects the push because `gh-pages` already has a different history, use:
+
+```bash
+git subtree split --prefix build/web -b gh-pages-temp
+git push -f origin gh-pages-temp:gh-pages
+git branch -D gh-pages-temp
+```
+
+5. On GitHub open **Settings -> Pages**.
+6. Under **Source** choose **Deploy from a branch**.
+7. Select the `gh-pages` branch and the `/ (root)` folder, then click **Save**.
+8. After a minute or two the app is live at https://jutt-azeem.github.io/hivespace-expense/
+
+To update the live app later, rebuild, commit `build/web` again and run the same `git subtree push` command.
 
 ## Usage
 
