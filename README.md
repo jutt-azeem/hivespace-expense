@@ -79,6 +79,38 @@ For Chrome:
 flutter run -d chrome
 ```
 
+## Build for Web
+
+```bash
+flutter build web --release --base-href "/hivespace-expense/"
+```
+
+The `--base-href` value must match the repository name, otherwise the page will be blank on GitHub Pages. The build output is created in `build/web`.
+
+## Deploy to GitHub Pages
+
+1. Push the project code to the `main` branch of the GitHub repository.
+2. Build the web version using the command in the section above.
+3. Publish the `build/web` folder to a `gh-pages` branch:
+
+```bash
+cd build/web
+git init
+git checkout -b gh-pages
+git add .
+git commit -m "Deploy web build"
+git remote add origin https://github.com/jutt-azeem/hivespace-expense.git
+git push -f origin gh-pages
+cd ../..
+```
+
+4. On GitHub open **Settings -> Pages**.
+5. Under **Source** choose **Deploy from a branch**.
+6. Select the `gh-pages` branch and the `/ (root)` folder, then click **Save**.
+7. After a minute or two the app is live at https://jutt-azeem.github.io/hivespace-expense/
+
+To update the live app later, rebuild and push `build/web` to `gh-pages` again.
+
 ## Usage
 
 1. Add categories using the category option.
@@ -109,7 +141,6 @@ On Android, data persists locally across app restarts.
 - [x] Task 2: Add Category, Add Expense, validation and Hive local storage.
 - [x] Task 3: Dashboard, category-wise bar chart and CSV export.
 - [x] GitHub Pages deployment and live demo.
-  https://jutt-azeem.github.io/hivespace-expense/
 
 ## Author
 
