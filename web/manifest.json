@@ -1,6 +1,6 @@
 {
-    "name": "hivespace_expense",
-    "short_name": "hivespace_expense",
+    "name": "HiveSpace Expense Tracker",
+    "short_name": "HiveSpace Expense Tracker",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
