@@ -55,7 +55,7 @@ class HiveSpaceApp extends StatelessWidget {
       title: 'HiveSpace Expenses',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF3868D6),
+          seedColor: const Color(0xFF8E44AD),
         ),
         useMaterial3: true,
       ),

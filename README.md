@@ -4,8 +4,7 @@ A lightweight Flutter app for HiveSpace Coworking staff to record daily operatio
 
 **Status:** Task 1, Task 2 and Task 3 features completed.
 
-**Live demo:** Coming soon (GitHub Pages deployment).
-
+Live demo: https://jutt-azeem.github.io/hivespace-expense/
 ---
 
 ## Features
@@ -108,8 +107,8 @@ On Android, data persists locally across app restarts.
 - [x] Task 1: Project setup and first screen.
 - [x] Task 2: Add Category, Add Expense, validation and Hive local storage.
 - [x] Task 3: Dashboard, category-wise bar chart and CSV export.
-- [ ] GitHub Pages deployment and live demo.
-
+- [x] GitHub Pages deployment and live demo.
+  https://jutt-azeem.github.io/hivespace-expense/
 ## Author
 
 Azeem Ali  
