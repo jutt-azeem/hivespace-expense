@@ -124,9 +124,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final expenses = expenseBox.values.toList().reversed.toList();
 
-    debugPrint("Total Expenses: ${expenseBox.length}");
-    debugPrint("Expenses Data: ${expenseBox.values.toList()}");
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
