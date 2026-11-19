@@ -19,7 +19,7 @@ Future<void> exportExpensesToCsv() async {
       expense.title,
       expense.amount,
       expense.category,
-      expense.date.toString(),
+      expense.date.toIso8601String().split('T').first,
       expense.note,
     ]);
   }
